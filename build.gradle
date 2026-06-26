@@ -1,0 +1,34 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.3.21'
+}
+
+group = 'com.turashift.kotlincmd'
+version = '2-26062026a'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.turashift.kotlincmd.MainKt'
+        )
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+kotlin {
+    jvmToolchain(21)
+}
+
+test {
+    useJUnitPlatform()
+}
