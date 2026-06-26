@@ -2,15 +2,15 @@ package com.turashift.kotlincmd.modules
 
 fun calc_work() {
 
-    //Variables
+    //Variables\Переменные
     val Num1 = readln().toDoubleOrNull()
     val Char = readln()
     val Num2 = readln().toDoubleOrNull()
 
-    //Input validation
+    //Input validation\Проверка ввода
     if (Num1 != null && Num2 != null) {
 
-        //Command processing
+        //Command processing\Обработка команды
         when (Char) {
 
             "+" -> println(Num1 + Num2)
@@ -47,19 +47,19 @@ fun calc_work() {
 
 fun calc () {
 
-    //Variables
+    //Variables\Переменные
     var input: String
 
-    //Main program loop
+    //Main program loop\Основной цикл
     while (true) {
 
         calc_work()
 
-        //Request to continue function execution
+        //Request to continue function execution\Запрос на продолжение
         print("Continue? [Y/n] ")
         input = readln()
 
-        //Command processing
+        //Command processing\Обработка команд
         when (input) {
 
             "Y", "y" -> {}

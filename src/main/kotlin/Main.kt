@@ -1,29 +1,33 @@
 package com.turashift.kotlincmd
 
-//Importing commands
+//Importing commands\Импорт команд
 import com.turashift.kotlincmd.modules.EXIT_COMMAND
 import com.turashift.kotlincmd.modules.CALC_COMMAND
+import com.turashift.kotlincmd.modules.CREATE_FILE_COMMAND
+import com.turashift.kotlincmd.modules.DELETE_FILE_COMMAND
 
-//Importing functions from modules
+//Importing functions from modules\Импорт функций модулей
 import com.turashift.kotlincmd.modules.exit
 import com.turashift.kotlincmd.modules.calc
+import com.turashift.kotlincmd.modules.createFile
+import com.turashift.kotlincmd.modules.deleteFile
 
 fun main() {
 
-    //Variables
+    //Variables\Переменные
     var exit_Output = false
 
-    //Main program loop
+    //Main program loop\Основной цикл
     while (exit_Output == false) {
 
-        //Command promt
+        //Command promt\Промт команды
         println()
         print("kcmd ~# ")
 
-        //Read command
+        //Read command\Ввод команды
         var command = readln()
 
-        //Command processing
+        //Command processing\Обработка команды
         when(command) {
 
             HELP_COMMAND -> {
@@ -35,6 +39,10 @@ fun main() {
             EXIT_COMMAND -> exit_Output = exit()
 
             CALC_COMMAND -> calc()
+
+            CREATE_FILE_COMMAND -> createFile()
+
+            DELETE_FILE_COMMAND -> deleteFile()
 
             else -> println("Unknown command: $command.")
 
