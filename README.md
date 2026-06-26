@@ -10,7 +10,7 @@ At present, the project supports only three commands:
 - `help` – displays the available terminal commands.
 - `exit` – exits the terminal (with a confirmation prompt).
 - `calc` – used to launch the calculator.
-- - `cfile` - activates the file manager with the ability to create files
+- `cfile` - activates the file manager with the ability to create files
 > how to use:
 ```bash
 Create File > text.txt #The file will be created in the same directory as the program file (KotlinCMD); this method is similar to ./text.txt, and ../text.txt is also supported, which can create a file in the parent directory relative to the program.
