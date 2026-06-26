@@ -11,15 +11,18 @@ fun exit(): Boolean {
     //User confirmation
     val confirm = readln()
 
-    //Action after input
+    //Command processing
     when (confirm) {
+
         "Y", "y" -> {
             output = true
         }
+
         "N", "n" -> {
-            print("Exit cancelled")
+            print("Exit cancelled!")
             output = false
         }
+
         else -> {
             print("Exit cancelled due to user input error.")
             output = false

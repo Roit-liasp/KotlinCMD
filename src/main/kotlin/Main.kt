@@ -2,9 +2,11 @@ package com.turashift.kotlincmd
 
 //Importing commands
 import com.turashift.kotlincmd.modules.EXIT_COMMAND
+import com.turashift.kotlincmd.modules.CALC_COMMAND
 
 //Importing functions from modules
 import com.turashift.kotlincmd.modules.exit
+import com.turashift.kotlincmd.modules.calc
 
 fun main() {
 
@@ -21,14 +23,21 @@ fun main() {
         //Read command
         var command = readln()
 
-        //Action after input
+        //Command processing
         when(command) {
+
             HELP_COMMAND -> {
-                println("help - displays available commands")
-                print("$EXIT_COMMAND - closes the terminal after confirmation")
+                println("help - displays available commands.")
+                println("$EXIT_COMMAND - closes the terminal after confirmation.")
+                println("$CALC_COMMAND - launches the calculator.")
             }
 
             EXIT_COMMAND -> exit_Output = exit()
+
+            CALC_COMMAND -> calc()
+
+            else -> println("Unknown command: $command.")
+
         }
 
     }
