@@ -1,6 +1,6 @@
 package com.turashift.kotlincmd.modules
 
-fun calc_work() {
+private fun calc_work() {
 
     //Variables\Переменные
     val Num1 = readln().toDoubleOrNull()

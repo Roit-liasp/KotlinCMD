@@ -1,24 +1,35 @@
 package com.turashift.kotlincmd.modules
 
+//Importing commands\Импорт команд
+import com.turashift.kotlincmd.PROMT
+
 //For working with files\Для работы с файлами
 import java.io.File
 
 fun createFile() {
 
     //Prompt manager\Промт менеджера
-    print("Create File ~> ")
+    print("$PROMT/Create File ~> ")
 
     //Requesting the file name and path\Запрос на имя файла или путь
     val file = File(readln())
 
     //Processing\Обработка
-    if (file.createNewFile() == true) {
+    try {
 
-        println("File created: $file")
+        if (file.createNewFile() == true) {
 
-    } else {
+            println("File created: $file")
 
-        println("Failed to create the file: $file")
+        } else {
+
+            println("Failed to create the file: $file")
+
+        }
+
+    } catch (error: Exception) { //To prevent the program from crashing\Чтобы программа не упала
+
+        println("Error: $error")
 
     }
 
@@ -27,7 +38,7 @@ fun createFile() {
 fun deleteFile() {
 
     //Prompt manager\Промт менеджера
-    print("Delete File ~> ")
+    print("$PROMT/Delete File ~> ")
 
     //Requesting the file name and path\Запрос на имя файла или путь
     val file = File(readln())
@@ -36,13 +47,22 @@ fun deleteFile() {
     if (file.exists() == true) {
 
         //Processing\Обработка
-        if (file.delete() == true) {
+        try {
 
-            println("File deleted: $file")
 
-        } else {
+            if (file.delete() == true) {
 
-            println("Failed to delete the file: $file")
+                println("File deleted: $file")
+
+            } else {
+
+                println("Failed to delete the file: $file")
+
+            }
+
+        } catch (error: Exception) { //To prevent the program from crashing\Чтобы программа не упала
+
+            println("Error: $error")
 
         }
 

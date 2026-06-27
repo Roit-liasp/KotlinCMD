@@ -23,7 +23,7 @@ fun main() {
     while (exit_Output == false) {
 
         //Command promt\Промт команды
-        print("kcmd ~> ")
+        print("$PROMT ~> ")
 
         //Read command\Ввод команды
         var command = readln()
@@ -55,6 +55,7 @@ fun main() {
 }
 
 const val HELP_COMMAND = "help"
+const val PROMT = "kcmd"
 
 
 /*
