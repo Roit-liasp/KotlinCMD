@@ -33,12 +33,16 @@ fun main() {
 
             HELP_COMMAND -> {
 
-                println("$HELP_COMMAND - displays available commands.")
-                println("$EXIT_COMMAND - closes the terminal after confirmation.")
-                println("$CALC_COMMAND - launches the calculator.")
-                println("$CREATE_FILE_COMMAND - file creation command.")
-                println("$DELETE_FILE_COMMAND - file deletion command.")
-                println("$INFO_CMD_COMMAND - displaying project information.")
+                println(
+                    """
+                    $HELP_COMMAND - displays available commands.
+                    $EXIT_COMMAND - closes the terminal after confirmation.
+                    $CALC_COMMAND - launches the calculator.
+                    $CREATE_FILE_COMMAND - file creation command.
+                    $DELETE_FILE_COMMAND - file deletion command.
+                    $INFO_CMD_COMMAND - displaying project information.
+                    """.trimIndent()
+                )
 
             }
             EXIT_COMMAND -> exit_Output = exit()
