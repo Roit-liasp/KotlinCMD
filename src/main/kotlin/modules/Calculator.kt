@@ -2,13 +2,15 @@ package com.turashift.kotlincmd.modules
 
 private fun calc_work() {
 
+    println("Enter with spaces, for example: \"723 + 127\" or \"72 / 8\".")
+
     //Variables\Переменные
     val input = readln()
     val Num1: Any?
     val Char: Any?
     val Num2: Any?
 
-    println("Enter with spaces, for example: \"723 + 127\" or \"72 / 8\".")
+
 
     //Fragmentation\Раздробление
     var list = input.split(" ")
