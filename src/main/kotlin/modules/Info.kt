@@ -5,12 +5,12 @@ fun infoCMD () {
     println(
         """
         Project: KotlinCMD
-        Version: 11-27062026a
+        Version: 11-28062026a
         Last updated: 28.06.2026 (DD.MM.YYYY)
         Status: alpha
         Author: Pavel Mizev
         Developers:
-        - Pavel Mizev
+        - Pavel Mizev ( https://github.com/PavelMizevDev )
         - Roit ( https://github.com/Roit-liasp )
         """.trimIndent()
     )
