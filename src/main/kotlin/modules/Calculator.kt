@@ -3,9 +3,10 @@ package com.turashift.kotlincmd.modules
 private fun calc_work() {
 
     println("Enter with spaces, for example: \"723 + 127\" or \"72 / 8\".")
+    print("Expression: ")
+    val input = readln()
 
     //Variables\Переменные
-    val input = readln()
     val Num1: Any?
     val Char: Any?
     val Num2: Any?
@@ -35,14 +36,14 @@ private fun calc_work() {
         //Command processing\Обработка команды
         when (Char) {
 
-            "+" -> println(Num1 + Num2)
-            "-" -> println(Num1 - Num2)
-            "*" -> println(Num1 * Num2)
+            "+" -> println("Answer: ${Num1 + Num2}")
+            "-" -> println("Answer: ${Num1 - Num2}")
+            "*" -> println("Answer: ${Num1 * Num2}")
             "/", ":" -> {
 
                 if (Num2 != 0.0) {
 
-                    println(Num1 / Num2)
+                    println("Answer: ${Num1 / Num2}")
 
                 } else {
 
