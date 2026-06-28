@@ -4,12 +4,31 @@ private fun calc_work() {
 
     //Variables\Переменные
     val input = readln()
+    val Num1: Any?
+    val Char: Any?
+    val Num2: Any?
 
     //Fragmentation\Раздробление
-    val list = input.split("", " ")
-    val Num1 = list[0].toDoubleOrNull()
-    val Char = list[1]
-    val Num2 = list[2].toDoubleOrNull()
+    var list = input.split("", " ")
+
+    if (list.size == 3) {
+
+        Num1 = list[0].toDoubleOrNull()
+        Char = list[1]
+        Num2 = list[2].toDoubleOrNull()
+
+    } else if (list.size == 5) {
+
+        Num1 = list[1].toDoubleOrNull()
+        Char = list[2]
+        Num2 = list[3].toDoubleOrNull()
+
+    } else {
+
+        println("Error! The splitting was done incorrectly! It is better to enter each character separated by a space.")
+        return
+
+    }
 
     //Input validation\Проверка ввода
     if (Num1 != null && Num2 != null) {
